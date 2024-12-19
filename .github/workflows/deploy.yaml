@@ -1,0 +1,18 @@
+name: Prepare Build
+on: workflow_dispatch
+jobs:
+  Build-And-Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      -name: Install Dependencies
+        run: npm ci
+      - name: Prepare Build
+        run: npm run build
+      - name: Download Build Files
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: dist
+    

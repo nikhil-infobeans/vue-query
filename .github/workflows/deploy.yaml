@@ -1,8 +1,10 @@
-name: Prepare Build
+name: First Workflow
 on: workflow_dispatch
 jobs:
-  Build-And-Deploy:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Message
+      - name: Print greeting
         run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"

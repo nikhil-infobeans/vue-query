@@ -1,7 +1,7 @@
 name: Prepare Build
 on: workflow_dispatch
 jobs:
-  Build-And-Deploy
+  Build-And-Deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -15,4 +15,3 @@ jobs:
         with:
           name: dist-files
           path: dist
-    
